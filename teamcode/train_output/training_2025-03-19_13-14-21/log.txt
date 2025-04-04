@@ -1,8 +1,0 @@
-2025-03-19 13:14:21.639 | INFO     | __main__:my_challenge_train_model:236 - Model folder: train_output
-2025-03-19 13:14:21.639 | INFO     | __main__:my_challenge_train_model:237 - Using device type: cpu
-2025-03-19 13:14:21.640 | INFO     | __main__:my_challenge_train_model:245 - Number of recordings: 16
-2025-03-19 13:14:21.999 | INFO     | teamcode.dataset.utils:prepare_datasplits:64 - Preparing mixed data splits
-2025-03-19 13:14:22.066 | INFO     | teamcode.dataset.utils:prepare_datasplits:115 - Found 1 recordings with Chagas and 15 without
-2025-03-19 13:14:22.066 | INFO     | teamcode.dataset.utils:split_stratified:165 - Chagas recordings (1): Train - 0, Val - 0, Test - 1
-2025-03-19 13:14:22.066 | INFO     | teamcode.dataset.utils:split_stratified:166 - Normal recordings (0): Train - 10, Val - 1, Test - 4
-2025-03-19 13:14:22.067 | INFO     | __main__:my_challenge_train_model:312 - Dataset length: train = 10, val_ds = 1, test_ds = 5
