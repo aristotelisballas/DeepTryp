@@ -18,18 +18,18 @@ def my_challenge_load_model(model_folder, verbose):
     # print(training_dirs)
     ######## Only for Grid Search experimentation
     cconf = load_config(config_path='./teamcode/config.yaml')
-    if 'pretrainedTrue' in training_dirs[-1]:
-        cconf['load_pretrained'] = True
-    else:
-        cconf['load_pretrained'] = False
-    if 'biodgresnet18' in training_dirs[-1]:
-        cconf['model'] = 'biodgresnet18'
-    elif 'biodgsresnet' in training_dirs[-1]:
-        cconf['model'] = 'biodgsresnet'
-    elif 'lebillcnn' in training_dirs[-1]:
-        cconf['model'] = 'lebillcnn'
-    else:
-        cconf['model'] = 'resnet18'
+    # if 'pretrainedTrue' in training_dirs[-1]:
+    #     cconf['load_pretrained'] = True
+    # else:
+    #     cconf['load_pretrained'] = False
+    # if 'biodgresnet18' in training_dirs[-1]:
+    #     cconf['model'] = 'biodgresnet18'
+    # elif 'biodgsresnet' in training_dirs[-1]:
+    #     cconf['model'] = 'biodgsresnet'
+    # elif 'lebillcnn' in training_dirs[-1]:
+    #     cconf['model'] = 'lebillcnn'
+    # else:
+    #     cconf['model'] = 'resnet18'
 
     cconf['device'] = ("cuda" if torch.cuda.is_available() else "mps" if torch.backends.mps.is_available() else "cpu")
 
