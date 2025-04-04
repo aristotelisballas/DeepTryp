@@ -1,0 +1,3 @@
+2025-03-19 13:14:01.772 | INFO     | __main__:my_challenge_train_model:236 - Model folder: train_output
+2025-03-19 13:14:01.772 | INFO     | __main__:my_challenge_train_model:237 - Using device type: cpu
+2025-03-19 13:14:01.773 | INFO     | __main__:my_challenge_train_model:245 - Number of recordings: 16

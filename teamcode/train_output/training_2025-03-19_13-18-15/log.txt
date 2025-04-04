@@ -1,0 +1,23 @@
+2025-03-19 13:18:15.899 | INFO     | __main__:my_challenge_train_model:236 - Model folder: train_output
+2025-03-19 13:18:15.899 | INFO     | __main__:my_challenge_train_model:237 - Using device type: cpu
+2025-03-19 13:18:15.899 | INFO     | __main__:my_challenge_train_model:245 - Number of recordings: 16
+2025-03-19 13:18:16.258 | INFO     | teamcode.dataset.utils:prepare_datasplits:64 - Preparing mixed data splits
+2025-03-19 13:18:16.324 | INFO     | teamcode.dataset.utils:prepare_datasplits:115 - Found 1 recordings with Chagas and 15 without
+2025-03-19 13:18:16.324 | INFO     | teamcode.dataset.utils:split_stratified:165 - Chagas recordings (1): Train - 0, Val - 0, Test - 1
+2025-03-19 13:18:16.324 | INFO     | teamcode.dataset.utils:split_stratified:166 - Normal recordings (0): Train - 10, Val - 1, Test - 4
+2025-03-19 13:18:16.324 | INFO     | __main__:my_challenge_train_model:312 - Dataset length: train = 10, val_ds = 1, test_ds = 5
+2025-03-19 13:18:16.369 | INFO     | __main__:my_challenge_train_model:326 - Training model: biodgresnet18
+2025-03-19 13:18:17.146 | INFO     | __main__:train_model:55 - Epoch 1/2: 5 train and 1 val batches
+2025-03-19 13:18:18.847 | INFO     | __main__:train_model:135 - Epoch 1/2, Train Loss: 0.1659, Val Loss: 0.0149, Time: 1.7 sec
+2025-03-19 13:18:18.848 | INFO     | __main__:train_model:55 - Epoch 2/2: 5 train and 1 val batches
+2025-03-19 13:18:20.619 | INFO     | __main__:train_model:135 - Epoch 2/2, Train Loss: 0.0041, Val Loss: 0.0000, Time: 1.8 sec
+2025-03-19 13:18:20.620 | INFO     | __main__:evaluate_model:149 - Beginning evaluation
+2025-03-19 13:18:21.110 | INFO     | __main__:evaluate_model:186 - ######## Test Results #######
+2025-03-19 13:18:21.110 | INFO     | __main__:evaluate_model:187 - Test Loss: 2.3138
+2025-03-19 13:18:21.110 | INFO     | __main__:evaluate_model:188 - Accuracy: 0.8000
+2025-03-19 13:18:21.110 | INFO     | __main__:evaluate_model:189 - Precision: 0.0000
+2025-03-19 13:18:21.110 | INFO     | __main__:evaluate_model:190 - Recall: 0.0000
+2025-03-19 13:18:21.110 | INFO     | __main__:evaluate_model:191 - F1 Score: 0.0000
+2025-03-19 13:18:21.111 | INFO     | __main__:evaluate_model:192 - Confusion Matrix:
+[[4 0]
+ [1 0]]

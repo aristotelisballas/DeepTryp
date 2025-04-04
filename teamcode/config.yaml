@@ -1,0 +1,32 @@
+# Common
+signal_fs: 400  # Sampling frequency in Hz
+wsize_sec: 10.0
+wstep_sec: 2.5
+
+# Pre-processing
+lp_filter: false
+
+# Augmentations
+augment: false
+recording_crop_sec: 0.0  # Crop start and stop of each recording (only during training)
+split_windows: false
+
+# Logger Stuff
+log_level: 'INFO'  # Log level options: TRACE, DEBUG, INFO, SUCCESS, WARNING, ERROR, CRITICAL
+
+# Training Stuff
+batch_size: 64
+lr: 0.0001  # Learning rate
+train_steps: 50000
+patience: 5
+model: 'biodgsresnet'  # Options: resnet18, ecgchagasnet, tester
+split_type: 'mixed'  # Options: 'ood'
+
+load_pretrained: false
+freeze_layers: false
+
+focal: true
+alpha: 0.25
+gamma: 2.0
+
+# Testing Stuff

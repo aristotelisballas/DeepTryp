@@ -1,0 +1,10 @@
+2025-03-19 13:17:38.411 | INFO     | __main__:my_challenge_train_model:236 - Model folder: train_output
+2025-03-19 13:17:38.411 | INFO     | __main__:my_challenge_train_model:237 - Using device type: cpu
+2025-03-19 13:17:38.411 | INFO     | __main__:my_challenge_train_model:245 - Number of recordings: 16
+2025-03-19 13:17:38.853 | INFO     | teamcode.dataset.utils:prepare_datasplits:64 - Preparing mixed data splits
+2025-03-19 13:17:38.930 | INFO     | teamcode.dataset.utils:prepare_datasplits:115 - Found 1 recordings with Chagas and 15 without
+2025-03-19 13:17:38.930 | INFO     | teamcode.dataset.utils:split_stratified:165 - Chagas recordings (1): Train - 0, Val - 0, Test - 1
+2025-03-19 13:17:38.930 | INFO     | teamcode.dataset.utils:split_stratified:166 - Normal recordings (0): Train - 10, Val - 1, Test - 4
+2025-03-19 13:17:38.930 | INFO     | __main__:my_challenge_train_model:312 - Dataset length: train = 10, val_ds = 1, test_ds = 5
+2025-03-19 13:17:38.976 | INFO     | __main__:my_challenge_train_model:326 - Training model: biodgresnet18
+2025-03-19 13:17:40.365 | INFO     | __main__:train_model:55 - Epoch 1/2: 5 train and 1 val batches
