@@ -1,4 +1,4 @@
-# Physionet 2022 challenge
+# Physionet 2025 challenge
 
 > DeepTryp
 
