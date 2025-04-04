@@ -25,7 +25,7 @@ split_type: 'mixed'  # Options: 'ood'
 load_pretrained: false
 freeze_layers: false
 
-focal: true
+focal: false
 alpha: 0.25
 gamma: 2.0
 
