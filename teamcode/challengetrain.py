@@ -93,9 +93,10 @@ def train_model(model, train_loader, val_loader, log_dir: Path, cconf: dict):
                 lr_patience_counter = 0
                 loss_divergence_counter = 0  # Reset divergence counter as well
             else:
-                patience_counter += 1
-                lr_patience_counter += 1
-                logger.info(f"Patience: {patience_counter}/10")
+                if step_i > 10000:
+                    patience_counter += 1
+                    lr_patience_counter += 1
+                    logger.info(f"Patience: {patience_counter}/10")
 
             if lr_patience_counter >= 3 and step_i > 30000:
                 current_lr = optimizer.param_groups[0]['lr']
