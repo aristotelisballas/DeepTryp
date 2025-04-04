@@ -36,7 +36,7 @@ def my_challenge_load_model(model_folder, verbose):
     model = get_model(eval_phase=True, cconf=cconf)
 
     model.load_state_dict(
-        torch.load(Path(model_folder) / 'model.pth',
+        torch.load(Path(model_folder) / training_dirs[-1] / 'model.pth',
                    weights_only=True,
                    map_location=cconf['device']))
 
