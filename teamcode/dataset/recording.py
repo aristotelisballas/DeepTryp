@@ -17,7 +17,7 @@ def _extract_property(attributes: List[str], attribute_name: str) -> str:
 
 class RecordingMetadata:
     def __init__(self, dataset_path: Optional[Path] = None,
-                 id: Optional[int] = None,
+                 id: Optional[str] = None,
                  exams: List[pd.DataFrame] = None,):
         def append_optional_part(p: str) -> Optional[Path]:
             return None if dataset_path is None else dataset_path / (str(id) + p)
@@ -51,7 +51,7 @@ class RecordingMetadata:
 class Recording:
     def __init__(self, header: str, dataset_path: Optional[Path] = None, exams: List[pd.DataFrame] = None):
 
-        self.id: int = int(get_record_name(header))
+        self.id = get_record_name(header)
 
         self.location: str = str(dataset_path)
 
