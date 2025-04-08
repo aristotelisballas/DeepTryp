@@ -3,6 +3,7 @@ import datetime
 import os
 import sys
 import time
+import random
 from pathlib import Path
 
 import numpy as np
@@ -240,9 +241,9 @@ def my_challenge_train_model(data_folder, model_folder, verbose,
     # with open('./teamcode/dataset/datasplits/mixed_positive.txt') as f:
     #     p_files = f.read().splitlines()
 
-    # random.Random(42).shuffle(n_files)
+    random.Random(42).shuffle(n_files)
 
-    # n_files = n_files[:10000]
+    n_files = n_files[:15000]
 
     # with open(r'./teamcode/dataset/datasplits/n_files', 'w') as fp:
     #     for item in n_files:
@@ -259,8 +260,8 @@ def my_challenge_train_model(data_folder, model_folder, verbose,
 
     # train_idx, val_idx, test_idx = get_train_val_test_idx(num_recordings=num_records)
 
-    n_train_files, p_train_files, val_files, test_files = split_stratified(n_files, p_files, return_splits=True)
-
+    # n_train_files, p_train_files, val_files, test_files = split_stratified(n_files, p_files, return_splits=True)
+    train_files, val_files, test_files = split_stratified(n_files, p_files, return_splits=True)
     # assert len(train_files) + len(test_files) + len(val_files) == len(filenames)
 
     # Augmentations
@@ -269,8 +270,8 @@ def my_challenge_train_model(data_folder, model_folder, verbose,
     else:
         augmentor = None
 
-    train_ds = BalancedECGDataset(
-        filenames=[n_train_files, p_train_files],
+    train_ds = ECGDataset(
+        filenames=train_files,
         dataset_path=data_folder,
         exams=exams,
         augmentor=augmentor,
@@ -298,12 +299,12 @@ def my_challenge_train_model(data_folder, model_folder, verbose,
     # Create DataLoaders for each split
     batch_size = cconf['batch_size']
 
-    train_loader = DataLoader(train_ds, batch_size=batch_size, shuffle=True,
-                              num_workers=8, pin_memory=True, prefetch_factor=4, collate_fn=balanced_collate_fn)
-    val_loader = DataLoader(val_ds, batch_size=batch_size, shuffle=False,
-                            num_workers=8, pin_memory=True, prefetch_factor=4)
-    test_loader = DataLoader(test_ds, batch_size=batch_size, shuffle=False,
-                             num_workers=8, pin_memory=True, prefetch_factor=4)
+    train_loader = DataLoader(train_ds, batch_size=batch_size, shuffle=True)
+                              #num_workers=8, pin_memory=True, prefetch_factor=4)#, collate_fn=balanced_collate_fn)
+    val_loader = DataLoader(val_ds, batch_size=batch_size, shuffle=False)
+                            # num_workers=8, pin_memory=True, prefetch_factor=4)
+    test_loader = DataLoader(test_ds, batch_size=batch_size, shuffle=False)
+                             # num_workers=8, pin_memory=True, prefetch_factor=4)
 
     model = get_model(cconf=cconf)
 
