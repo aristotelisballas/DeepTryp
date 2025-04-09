@@ -261,7 +261,7 @@ def my_challenge_train_model(data_folder, model_folder, verbose,
     # train_idx, val_idx, test_idx = get_train_val_test_idx(num_recordings=num_records)
 
     # n_train_files, p_train_files, val_files, test_files = split_stratified(n_files, p_files, return_splits=True)
-    train_files, val_files, test_files = split_stratified(n_files, p_files, return_splits=True)
+    train_files, val_files, test_files = split_stratified(n_files, p_files, return_splits=False)
     # assert len(train_files) + len(test_files) + len(val_files) == len(filenames)
 
     # Augmentations
